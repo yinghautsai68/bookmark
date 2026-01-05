@@ -20,7 +20,7 @@ const Home = () => {
 
     const onLoad = async () => {
         try {
-            const response = await fetch(`${import.meta.env.BACKEND_URL}/api/post/feed`)
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/post/feed`)
 
             const data = await response.json()
             //console.log(data)

@@ -20,7 +20,7 @@ const Login = () => {
     const onSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await fetch(`${import.meta.env.BACKEND_URL}/api/user/login`, {
+            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password })
