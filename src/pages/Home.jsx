@@ -20,7 +20,7 @@ const Home = () => {
 
     const onLoad = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/post/feed")
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/post/feed`)
 
             const data = await response.json()
             //console.log(data)
