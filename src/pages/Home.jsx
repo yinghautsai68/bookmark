@@ -20,7 +20,12 @@ const Home = () => {
 
     const onLoad = async () => {
         try {
-            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/post/feed`)
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/login`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                credentials: "include", // only if using cookies
+                body: JSON.stringify({ username, password }),
+            });
 
             const data = await response.json()
             //console.log(data)
