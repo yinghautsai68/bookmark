@@ -18,7 +18,7 @@ const Chatroom = () => {
         try {
             const token = localStorage.getItem("token")
 
-            const response = await fetch("https://mern-backend-qtbl.onrender.com//api/user/users", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/user/users`, {
                 method: "GET",
                 headers: {
                     "authorization": `Bearer ${token}`
